@@ -1,0 +1,483 @@
+/* ----------------------------- Esprimo ---------------------------- */
+
+/* Data ultima modifica: 01 giugno 2010 */
+
+
+/* Definizione delle classi principali */
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	color: #595F64;
+	line-height: 1.166;
+	margin: 0px;
+	padding: 0px;
+	background-color: #297929;
+	background-image: url(../images/bgr_body.png);
+	background-attachment: scroll;
+	background-position: left top;
+	background-repeat: repeat-x;
+}
+.bodytext {
+	font-family: Arial, Helvetica, sans-serif;
+	/*font-size: 80%;*/
+	color: #595F64;
+	line-height: 1.462;
+}
+
+a:link, a:visited, a:hover {
+	color: #297929;
+	text-decoration: none;
+	font-weight: bold;
+}
+a:hover {
+	color: #000;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	margin: 0px;
+	padding: 0px;
+}
+h1{
+	font-size: 140%;
+	color: #000;
+	font-weight: normal;
+}
+h2{
+	font-size: 130%;
+	color: #297929;
+	font-weight: normal;
+}
+h3{
+	font-size: 120%;
+	color: #000;
+	font-weight: normal;
+}
+h4{
+	font-size: 110%;
+	color: #297929;
+	font-weight: normal;
+}
+h5{
+	font-size: 100%;
+	color: #000;
+	font-weight: bold;
+}
+h6{
+	font-size: 90%;
+	color: #297929;
+	font-weight: bold;
+}
+
+ul{
+	list-style-type: square;
+	font-size: 80%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+ul ul{
+	list-style-type: disc;
+	font-size: 100%;
+}
+ul ul ul{
+	list-style-type: none;
+	font-size: 100%;
+}
+ol{
+	font-size: 80%;
+}
+ol ol{
+	font-size: 100%;
+}
+ol ol ol{
+	font-size: 100%;
+}
+
+ol ul {
+	font-size: 100%;
+}
+
+hr {
+	color: #465966;
+	height: 0px;
+	border-top: 1px dotted #465966;
+	border-bottom: 0px;
+	border-left: 0px;
+	border-right: 0px;
+	margin: 5px 0px 5px 0px;
+	padding: 0px;
+}
+
+img {
+	border: 0px;
+}
+
+
+
+/***********************************************/
+/* Layout dei Divs principali   (struttura)    */
+/***********************************************/
+
+#container {
+	width: 980px;
+	padding: 0px 0px 0px 0px;
+	/*background-color: #FFF;*/
+	margin: auto;
+}
+
+#header {
+	width: 980px;
+	height: 140px;
+	padding: 0px 0px 0px 0px;
+	background-image: url(../images/bgr_header.png);
+	background-attachment: scroll;
+	background-position: right top;
+	background-repeat: no-repeat;
+	position: relative;
+	background-color: #fff;
+}
+
+#logo {
+	padding: 20px 0 0 30px;
+	width: 600px;
+	font-size: 280%;
+}
+
+#sottotitolo {
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+	color: #666;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 120%;
+	padding-right: 10px;
+	padding-bottom: 10px;
+}
+
+#main {
+	width: 980px;
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	overflow: hidden;
+	background-color: #fff;
+}
+#colSx {
+	width: 200px;
+	min-height: 400px;
+	float: left;
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	background-color: #E8E8E8;
+	background-image: url(../images/bgr_colSx.jpg);
+	background-attachment: scroll;
+	background-position: left bottom;
+	background-repeat: repeat-x;
+}
+#colDx {
+	width: 780px;
+	float: right;
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;	
+}
+
+#menuVert {
+	padding: 30px 20px 20px 20px;
+	margin: 0px 0px 0px 0px;
+}
+
+#top {
+	width: 760px;
+	line-height: 170px;
+	padding: 0px 0px 0px 20px;
+	margin: 0px 0px 0px 0px;
+	background-color: #297929;
+	background-image: url(../images/bgr_top.png);
+	background-attachment: scroll;
+	background-position: center top;
+	background-repeat: no-repeat;
+	text-align:left;
+}
+#menuHor {
+	width: 780px;
+	line-height: 37px;
+	float: right;
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	background-color: #E8E8E8;
+	text-align: right;
+}
+#breadcrumbs {
+	width: 740px;
+	line-height: 30px;
+	padding: 0px 20px 0px 20px;
+	border-bottom: 1px solid #EAEAEA;
+	text-align: left;
+	background-color: #fff;
+}
+
+#contentDx {
+	width: 740px;
+	padding: 0px 20px 20px 20px;
+	margin: 0px 0px 0px 0px;
+	background-color: #fff;
+}
+
+#footer {
+	width: 980px;
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	background-image: url(../images/bgr_footer.jpg);
+	background-attachment: scroll;
+	background-position: center top;
+	background-repeat: repeat-x;
+	height: 45px;
+}
+
+#footerSx {
+	width: 740px;
+	float: left;
+	padding: 0px 0px 0px 20px;
+	margin: 5px 0px 0px 0px;
+	text-align: left;
+}
+
+#footerDx {
+	width: 200px;
+	float: right;
+	padding: 0px 20px 0px 0px;
+	margin: 15px 0px 0px 0px;
+	text-align: right;
+	font-size: 14pt;
+}
+
+
+
+
+/***********************************************/
+/* Layout dei Divs principali   (stile)    */
+/***********************************************/
+
+/*********** menuVert styles ***********/
+#menuVert ul {
+	padding: 0px;
+	margin: 0px;
+	font-size: 100%;
+}
+#menuVert li {
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	border-bottom: 1px solid #FFF;
+	list-style-type: none;
+	font-size: 70%;
+	background-image: url(../images/arrowDx.gif);
+	background-attachment: scroll;
+	background-position: left center;
+	background-repeat: no-repeat;
+	text-decoration: none;
+	list-style-type: none;
+}
+
+
+
+#menuVert li a, #menuVert li a:link, #menuVert li a:visited, #menuVert li a:active {
+	padding: 0px 0px 0px 10px;
+	margin: 0px 0px 0px 0px;
+	
+	line-height: 28px;
+	text-align: center;
+	color: #000;
+	font-weight: normal;
+}
+
+#menuVert li.link_back
+{
+	background: url(../images/back.gif) left center no-repeat ;
+	
+	
+}
+
+#menuVert li.current {
+	color: #666;
+}
+
+#menuVert li a:hover {
+	color: #666;
+}
+
+/*********** menuHor styles ***********/
+#menuHor ul {
+	padding: 0px;
+	margin: 0px;
+	font-size: 100%;
+}
+#menuHor li {
+	display: block;
+	float: left;
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	list-style-type: none;
+	font-size: 70%;
+}
+
+#menuHor li.current {
+	padding: 0px 10px 0px 10px;
+	margin: 0px 0px 0px 0px;
+}
+
+#menuHor li a, #menuHor li a:link, #menuHor li a:visited, #menuHor li a:active {
+	display: block;
+	padding: 0px 10px 0px 10px;
+	margin: 0px 0px 0px 0px;
+	border-left: 1px solid #FFF;
+	text-decoration: none;
+	list-style-type: none;
+	line-height: 37px;
+	text-align: center;
+	color: #000;
+	font-weight: normal;
+}
+
+#menuHor li.current {
+	background-color: #297929;
+	color: #FFF;
+}
+
+#menuHor li a:hover {
+	background-image: url(../images/bgr_menu_hover.jpg);
+	background-attachment: scroll;
+	background-position: left top;
+	background-repeat: repeat-x;
+	color: #666;
+}
+
+/************** #top styles **************/
+#top {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 160%;
+	color: #FFF;
+}
+/************** #breadcrumbs styles **************/
+#breadcrumbs {
+	font-size: 65%;
+	color: #297929;
+}
+#breadcrumbs a, #footer a:link, #footer a:visited, #footer a:active {
+	color: #297929;
+	text-decoration: none;
+}
+#breadcrumbs a:hover {
+	color: #000;
+}
+/************** #title styles **************/
+#title {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 120%;
+	color: #000;
+}
+
+/************** #footer styles **************/
+#footer {
+	font-size: 65%;
+	color: #000;
+}
+#footer a, #footer a:link, #footer a:visited, #footer a:active {
+	color: #000;
+	font-weight: normal;
+	text-decoration: none;
+}
+#footer a:hover {
+	color: #000;
+	text-decoration: underline;
+}
+
+
+/*---------------dir2web---------------*/
+.text-footer
+{
+	text-align: right;
+	font-size: .8em;
+}
+
+.ilink
+{
+	margin: 10px auto 10px 10px; 
+	padding-left: 20px;
+	background: url(../images/bullet.jpg) left center no-repeat;
+}
+
+.image_gallery
+{
+	clear:both;
+}
+
+.gal_body
+{
+	position: relative;
+	margin: 10px;
+	text-align: center;
+	float: left;
+	height: 200px;
+	width: 200px;
+	overflow: hidden;
+	border: 1px solid #ccc;
+	padding: 3px;
+}
+
+.gal_caption
+{
+	font-size: 8pt;
+	color: #999;
+	text-align: center;
+	bottom: 0;
+	position: absolute;
+	width: 100%;
+}
+
+
+.image
+{
+	padding: 20px 10px 20px 10px;
+	border: 1px solid #ccc;
+	background-color: #eee;
+	margin: 10px auto;
+	text-align: center;
+}
+
+.image-body
+{
+	margin: 20px auto 5px auto;
+}
+
+.image-caption
+{
+	font-size: .8em;
+}
+
+.download
+{
+	margin: 1em auto 1em 0;
+	font-size: 1.2em;
+	padding-left: 20px;
+	background: url(../images/download.png) left center no-repeat;
+}
+
+.description_text
+{
+	margin: 10px 10px 30px 10px;
+	font-size: .9em;
+}
+
+.text
+{
+	margin: 10px 10px 30px 10px;
+	font-size: .9em;
+}
+
+.flash
+{
+	text-align: center;	
+	margin: 20px auto 20px auto;
+	
+}

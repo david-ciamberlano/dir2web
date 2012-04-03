@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="DESCRIPTION" content="" />
+	<meta name="KEYWORDS" content="" />
+	<meta name="Author" content="www.dir2web.it" />
+	<title><?d2w:title ?> - <?d2w:site_name ?> </title>	
+	<link rel="stylesheet" href="<?d2w:theme_path?>/css/generale.css" type="text/css" />		
+	<?d2w:system_head ?>
+</head>
+<body>	
+<header>
+    <nav>          	            
+        <?d2w:sections            	
+        	@default={<a href="@#ref" title="@#name">@#name</a>}
+        	@current={<span class="current">@#name</span>}
+        ?>  
+    </nav>
+    <div id="logo">
+        <div id="title"><?d2w:site_name?> - <?d2w:title?></div>
+		<div id="subtitle">Emotional web design</div>
+    </div>
+	<div id="breadcrumbs">
+		<?d2w:path
+			@default={<a href="@#ref">@#name</a> / }
+			@last={@#name}			                    
+		?>
+	</div>        
+    <nav>
+    	<a class="back" href="javascript:history.back(-1)">&lt; Back</a>
+		<?d2w:nav
+			@default={<a title="Vai alla pagina: @#name" href="@#ref">@#name</a>}
+		?>
+    </nav>        
+</header>
+
+<div id="content">
+	
+        <div id="main_content" class="rounded">
+        	<?d2w:contents
+
+			    @text={
+			        <div class="text">
+			            <h1 class="text_title">@#title</h1>                
+			            <div class="text_body">@#content</div>                
+			            <div class="text_footer">@#footer</div>
+			        </div>                
+			    }
+			    
+			    @image={                
+			        <div class="image">
+			            <div class="image_body">
+			                @#image
+			            </div>
+			            <p class="image_caption">@#caption</p>    
+			        </div>                
+			    }
+			    
+			    @download={                
+			        <div class="download">@#download</div>                
+			    }
+
+			    
+			    @flash={                
+			        <div class="flash">@#flash</div>                
+			    }
+			
+				@link={					
+					<div class="ilink">
+						<img src="_dir2web/_system/themes/d2w_default/link.png" alt="link" />
+						<a href="@#ref" title="@#name">@#name</a>
+					</div>
+				}
+				
+				@video={
+        			<div class="video">@#video</div>
+        		}
+        		
+        		@audio={
+        			<div class="audio">@#audio</div>
+        		}
+			    
+			?>    
+
+			<div class="image_gallery">
+				<div style="clear: both;"></div>
+				<?d2w:imagegallery
+				    @images={<div class="gal_body">@#image<div class="gal_caption">@#caption</div></div>}
+				?>
+				<div style="clear: both;"></div>
+			</div>		
+        </div>
+</div>
+
+<footer id="main_footer">
+        <?d2w:specialtext
+        	@text={<div class="special_text">@#_description.txt</div>} 
+        ?>
+        
+        <?d2w:specialimage
+        	@image={<div class="special_image">@#_description.jpg</div>}
+        ?>
+</footer>
+	
+</body>
+</html>

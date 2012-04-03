@@ -1,0 +1,129 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title><?d2w:title ?></title>
+<link rel="stylesheet" href="<?d2w:theme_path?>/css/generale.css" type="text/css" />
+<?d2w:system_head ?>
+</head>
+
+<body>
+<div id="container">
+
+	<div id="header">
+		<div id="logo">
+			<?d2w:specialimage 
+				@image={@_logo.png}
+			?>
+		</div>
+		<!-- end logo -->
+		<div id="sottotitolo">Simple, Light, flexible, unique</div>
+		<!-- end sottotitolo -->
+	</div>
+	<!-- end header -->
+	
+	<div id="main">
+	
+		<div id="colSx">
+			<div id="menuVert">
+				
+			</div>
+			<!-- end menuVert -->
+		</div>
+		<!-- end colSx -->
+
+		<div id="colDx">
+			<div id="top"><?d2w:title ?></div>
+			<!-- end top -->
+			
+			<div id="menuHor">
+			<ul>
+				<?d2w:sections
+					@default={<li><a href="@#ref">@#name</a></li>}
+	
+					@current={
+						<li class="current">@#name</li>
+					}
+				?>				  
+			</ul>			
+			</div>
+			<!-- end menuHor -->
+			
+			<div id="breadcrumbs">
+				<?d2w:path 
+					@default={<a href="@#ref">@#name</a> /}
+					@last={@#name}
+				?>
+			</div>
+			<!-- end breadcrumbs -->
+
+			<div id="contentDx" class="bodytext">
+				<div class="description_text">
+					<?d2w:specialtext @text={@_description.txt} ?>					
+				</div>
+
+				<div class="image_gallery">
+					<div style="clear: both;"></div>
+					<?d2w:imagegallery
+						@images={<div class="gal_body">@#image<div class="gal_caption">@#caption</div></div>} 						
+					?>					
+					<div style="clear: both;"></div>
+				</div>
+				
+				<?d2w:contents
+					@text={
+						<div class="text">
+				            <h2 class="title">@#title</h2>                
+				            <div class="bodytext">@#content</div>                
+				            <div class="text-footer">@#footer</div>
+				        </div>   
+					}
+					
+					@image={
+						<div class="image">
+				            <div class="image-body">@#image</div>
+				            <p class="image-caption">@#caption</p>    
+				        </div>
+					}
+					
+					@download={
+						<div class="download">@#download</div>
+					}
+					
+					@flash={
+						<div class="flash">@#flash</div>
+					}
+					
+					@link={
+						<div class="ilink"><a href="@#ref" title="@#name">@#name</a></div>
+					}
+				
+				?>		
+			</div>
+			<!-- end contentDx -->
+		</div>
+		<!-- end colDx -->
+		
+	</div>
+	<!-- end main -->
+
+	<div id="footer">
+		<div id="footerSx">
+			<?d2w:specialtext @text={@_footer.txt} ?>
+		</div>
+		<!-- end footerSx -->
+
+		<div id="footerDx">
+			<a href="#container" title="Up" style="text-decoration: none"><img src="_dir2web/system/themes/dir2web3_default/images/up.png" alt="Up"/></a>
+		</div>
+		<!-- end footerDx -->
+	</div>
+	<!-- end footer -->
+	
+</div>
+<!-- end container -->
+
+</body>
+</html>
