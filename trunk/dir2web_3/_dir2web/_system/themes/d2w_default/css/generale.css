@@ -1,0 +1,362 @@
+/* ----------------------------- Esprimo Web Design ---------------------------- */
+
+/* Data ultima modifica: 22 giugno 2011 */
+
+
+body {
+    background-color: #ccc;
+	color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 62.5%;
+    padding: 0px 0px 0px 0px;
+    margin: 0;    
+}
+
+
+/*********** Header ***********/
+header {
+    display: block;
+    margin: 0px auto;
+    width: 980px;
+}
+
+#logo {
+    -moz-border-radius: 0.8em;
+    -webkit-border-radius: 0.8em;
+    /*background: -moz-linear-gradient(top -90deg, #666, #333);*/
+	background-color: #333;
+    padding: 35px 0px 35px 40px;
+}
+
+#logo a:active {
+    background: transparent !important;
+}
+
+#title, #title a {
+	display: block;
+	font-size: 3.5em;
+	color: #51add3;
+}
+
+#subtitle, #subtitle a {
+	display: block;
+	font-size: 2.0em;
+	color: #9aa8ad;
+}
+
+
+/*********** Navigation ***********/
+nav {
+    display: block;
+    font-size: 1.4em;
+    font-weight: 700;
+    margin: 0px auto;
+    overflow: hidden;
+    padding: 0px 10px 0px 10px;
+    width: 960px;
+    
+}
+
+
+nav a {
+	float: left;
+	margin: 10px 5px 10px 5px;
+    -moz-border-radius: 0.3em;
+    -webkit-border-radius: 0.3em;
+    display: block;
+    color: #000 !important;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-decoration: none;
+}
+nav a:hover {    
+    background: #fff;
+    color: #9aa8ad!important;
+    
+}
+
+nav .current {    
+    background: #9aa8ad;
+    color: #fff !important;
+    
+    float: left;
+	margin: 10px 0 10px 0;
+    -moz-border-radius: 0.3em;
+    -webkit-border-radius: 0.3em;
+    display: block;    
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-decoration: none;
+}
+
+.back {    
+    background: #51add3;
+    color: #fff !important;
+}
+
+#breadcrumbs {
+	display: block;
+    color: #222;
+	font-size: 1.3em;
+	text-transform: capitalize;
+	padding: 10px 20px 10px 20px;
+	width: 940px;
+}
+
+/*********** Content ***********/
+#content {    
+    -webkit-box-orient: horizontal;
+    display: -webkit-box;    
+    font-size: 1.8em;
+    margin: 0px auto;
+	width: 980px;
+    
+}
+
+#main_content {
+    color: #222;
+    display: block;
+    line-height: 1.5em;  
+    text-align: center;
+}
+
+.rounded {
+    -moz-border-radius: 0.6em;
+    -webkit-border-radius: 0.6em;
+    background: #fff;
+    display: block;
+    padding: 10px 20px 20px 20px;
+    width: 940px;   
+}
+
+
+/*********** Footer ***********/
+footer {
+    display: block;    
+}
+
+#main_footer {    
+    color:#666;
+    font-size: 1.1em;
+    width: 980px;
+    margin: 0px auto;
+    padding: 15px;    
+    text-align: center;
+}
+
+
+/*********** Text ***********/
+
+h1 { font-size: 1.8em; color: #9aa8ad; border-bottom: 1px dotted #CCC; padding-bottom: 2px; text-transform: capitalize; }
+h2 { font-size: 1.4em; }
+h3 { font-size: 1.3em; }
+h4 { font-size: 1.2em; }
+h5 { font-size: 1.0em; }
+h6 { font-size: 0.8em; }
+
+
+h1, h2, h3, h4, h5, h6 { line-height: 1.0em; margin: 15px 0px 15px 0px; }
+
+a {
+    color: #2a708e;
+    text-decoration: none;
+	outline: none;
+}
+
+a img {
+    border: 0;
+}
+
+a:visited { color: #104258; }
+a:active { background: #eaf7fc; }
+a:hover { color: #0c1e2f; }
+
+
+/*********** Misc ***********/
+.floatleft {
+    float: left;
+}
+
+.floatright {
+    float: right;
+}
+
+hr {
+    border-bottom: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 1px dotted #d9d9d9;
+}
+
+
+.text
+{
+	margin: 10px 0 50px 0;
+}
+
+.text_title
+{
+	padding: 0px 0px 5px 0px;
+	margin: 20px 0px 10px 10px;
+	font-size: 20pt;
+	color: #000;
+	font-family: "Times New Roman", Times, serif;
+}
+
+
+.text_body
+{
+	border: 1px solid #eee;
+	padding: 1em;
+	line-height: 1.5em;
+	font-size: 11pt;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	margin: 0 10px;
+}
+
+.text_footer
+{
+    text-align: right;
+    margin-right: 20px;
+}
+
+
+.image{ margin: 10px 10px 25px 10px; display: inline-block; }
+
+.image_body
+{
+    text-align: center;
+    padding:2px;
+
+  
+}
+
+.image_body img
+{
+    
+    padding: 5px;
+    background-color: white;
+    border: 1px solid #ccc;
+
+        /* css 3 */
+    /* border */
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    -moz-border-radius-bottomright: 5px;
+    -moz-border-radius-bottomleft: 5px;
+
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+
+    /* shadow */
+    -moz-box-shadow: 1px 1px 7px rgba(153, 153, 153, 0.2);
+    -webkit-box-shadow: 1px 1px 7px rgba(153, 153, 153, 0.2);
+    box-shadow: 5px 5px 10px rgba(153, 153, 153, 0.2);
+}
+
+
+.image_caption
+{    
+    bottom: 30px;
+    left: 30px;
+    background: url("../images/transparent-bg.png");
+    color: #666;
+    padding: 5px;
+    margin: 0 auto;
+    font-size: .9em;
+    z-index: 20000;
+    text-align:center;
+}
+
+
+.flash
+{
+	text-align: center;
+	margin: 10px;
+}
+
+
+
+.ilink
+{
+	margin: 10px auto 10px 10px; 
+	padding-left: 20px;
+	background: url(../images/bullet.jpg) left center no-repeat;
+    display: inline-block;
+    font-size: 1.4em;
+}
+
+.download
+{
+	margin: 1em auto 1em 0;
+	font-size: 1.2em;
+	padding-left: 20px;
+	background: url(../images/download.png) left center no-repeat;
+}
+
+.audio
+{
+	text-align: center;	
+	margin: 30px auto;
+	width: 400px;
+}
+
+.video
+{
+	text-align: center;
+	margin: 10px auto;
+	width: 400px;
+	height: 300px;
+}
+
+.image_gallery
+{
+	clear:both;
+}
+
+.gal_body
+{
+	position: relative;
+	margin: 10px;
+	text-align: center;
+	float: left;
+	height: 200px;
+	width: 200px;
+	overflow: hidden;
+	border: 1px solid #ccc;
+	padding: 3px;
+	
+	-webkit-border-top-left-radius: 3px;
+    -webkit-border-top-right-radius: 3px;
+    -webkit-border-bottom-right-radius: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+
+    -moz-border-radius-topleft: 3px;
+    -moz-border-radius-topright: 3px;
+    -moz-border-radius-bottomright: 3px;
+    -moz-border-radius-bottomleft: 3px;
+
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.gal_caption
+{
+	font-size: 8pt;
+	color: #999;
+	text-align: center;
+	bottom: 0;
+	position: absolute;
+	width: 100%;
+}
