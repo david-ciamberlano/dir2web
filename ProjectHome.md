@@ -1,0 +1,1 @@
+This software allows you to create a website in a totally automatical way using an innovative procedure: it dynamically turns a directory tree (uploaded to a web-space) into a fully functional and fully customizable website.
